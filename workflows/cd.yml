@@ -1,5 +1,11 @@
- on:
-  workflow_dispatch:
+name: CodeScan CI
+
+on:
+  workflow_dispatch:  # permite execução manual
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 name: Continuous Deployment
 
