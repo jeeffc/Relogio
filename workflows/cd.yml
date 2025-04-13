@@ -1,5 +1,5 @@
- name: Super-Linter
-  uses: super-linter/super-linter@v7.3.0
+ on:
+  workflow_dispatch:
 
 name: Continuous Deployment
 
