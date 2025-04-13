@@ -1,9 +1,9 @@
 name: CI - Python App
 
 on:
-  pull_request:
-    branches: [main]
   push:
+    branches: [main]
+  pull_request:
     branches: [main]
 
 jobs:
@@ -26,4 +26,9 @@ jobs:
 
       - name: ✅ Rodar testes
         run: |
-          python -m unittest discover
+          # Use pytest se estiver usando-o; senão, use unittest
+          if [ -f pytest.ini ] || [ -d tests ]; then
+            pytest
+          else
+            python -m unittest discover
+          fi
