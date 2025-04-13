@@ -1,3 +1,6 @@
+ name: Super-Linter
+  uses: super-linter/super-linter@v7.3.0
+
 name: Continuous Deployment
 
 on:
